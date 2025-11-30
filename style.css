@@ -1,0 +1,256 @@
+:root{--accent:#4f46e5;--muted:#6b7280;--card:#e8e2e2;--bg:#f8fafc}
+*{box-sizing:border-box}
+body{
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+    line-height:1.4;
+    margin:0;
+    background:var(--bg);
+    color:#0f172a;
+    background-color: #ffffff;
+}
+
+a{color:inherit;text-decoration:none}
+
+/* ------------------ HARRY POTTER NAVBAR THEME ------------------ */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  background:#000000; /* deep black */
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+  background: linear-gradient(180deg,#000000, #000, #433107);
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  border: 2px solid gold;
+  color: gold;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  font-family: "Georgia", serif;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+/* ===== Magical Golden Text ===== */
+.logo-fullform{
+    color: gold;
+}
+
+/* CENTER LINKS */
+.nav-center * {
+    
+  color: rgb(237, 235, 221);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  font-size: small;
+}
+
+.nav-center {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-center a {
+  padding: 8px 12px;
+  font-weight: 600;
+  position: relative;
+  transition: 0.1s ease;
+}
+
+
+.nav-center a {
+  position: relative;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: rgb(241, 234, 199);
+  transition: 0.3s ease;
+}
+
+/* Magical golden glowing box */
+.nav-center a:hover {
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5),
+              inset 0 0 8px rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+  border-radius: 50px;
+}
+
+
+.nav-center a:hover::after {
+  width: 100%;
+}
+
+.nav-center a:hover {
+  text-shadow: 0 0 12px gold, 0 0 25px rgba(255, 223, 0, 0.6);
+  transform: scale(1.08);
+}
+
+/* RIGHT BUTTONS */
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+.nav-right a {
+    text-decoration: none;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid gold;
+  background: rgba(255, 215, 0, 0.12);
+  color: gold;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.btn:hover {
+  box-shadow: 0 0 12px gold, 0 0 25px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+  background: rgba(255, 215, 0, 0.18);
+}
+
+/* Sparkling hover effect */
+.btn:hover::after {
+  content: "✨";
+  position: relative;
+  left: 6px;
+  animation: sparkle 0.8s linear infinite;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0.5);}
+  50% { opacity: 1; transform: scale(1);}
+  100% { opacity: 0; transform: scale(0.5);}
+}
+
+
+/* NAVBAR 
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:linear-gradient(90deg, rgba(79,70,229,0.06), transparent);position:sticky;top:0;backdrop-filter:blur(6px);z-index:50}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;background:var(--accent);color:white;font-weight:700;border-radius:8px;display:grid;place-items:center}
+.nav-center{display:flex;gap:18px;align-items:center}
+.nav-center a{padding:8px 12px;border-radius:8px;color:var(--muted)}
+.nav-right{display:flex;gap:10px}
+.btn{padding:8px 12px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:white;cursor:pointer}
+.btn.ghost{background:transparent}
+*/
+
+
+/* HERO */
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    align-items:center;
+    padding:56px 24px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.card-wrap{max-width:560px}
+.flashcard-container {
+    width: 300px;
+    height: 160px;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.flashcard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 600;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.swipe-left {
+    transform: translateX(-120%);
+    opacity: 0;
+}
+
+.reset {
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.feature-title{font-size:20px;font-weight:600;margin-bottom:8px}
+.feature-desc{color:var(--muted)}
+
+
+
+
+.hero-image{width:80%;height:320px;border-radius:30px;object-fit:cover;box-shadow:0 10px 30px rgba(2,6,23,.08)}
+
+
+/* SECTIONS */
+.section{padding:48px 24px;background:transparent; background-color: #f3f8d0;}
+.container{max-width:1100px;margin:0 auto}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature-card{background:rgb(255, 255, 255);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,.04)}
+h2{margin:0 0 16px 0}
+p.lead{color:var(--muted);margin-bottom:8px}
+
+
+/* CONTACT */
+form{display:grid;gap:12px;max-width:640px}
+input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+button.primary{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+
+
+/* footer */
+footer{
+    padding:26px 24px;
+    text-align:center;
+    color:var(--muted);
+    background-color:#080400 ;
+}
+
+
+/* Responsive */
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;}
+.hero-image{height:260px}
+.grid-3{grid-template-columns:1fr}
+}
